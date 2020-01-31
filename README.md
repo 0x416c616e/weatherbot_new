@@ -11,6 +11,8 @@ All config files are in the .gitignore, in order to avoid accidentally publishin
 
 I have it set up so that I run tweet.py on an Ubuntu VM on one of my hypervisors. I run take_photo.sh on a Raspberry Pi Zero W running Raspbian, and it has SSH enabled and SFTP too. A dependency for the shell script is libimage-exiftool-perl. It also must have an SSH server running so that the Ubuntu Server VM can log in and download the photo. 
 
+Other Python package dependencies include Pillow and pysftp. 
+
 The Raspberry Pi Zero W has a camera that takes pictures of the sky using raspistill. 
 
 I guess you could technically try all of this on a single machine, but a Raspberry Pi Zero isn't very powerful, and I started this project as a VM on a hypervisor rather than something that has direct access to a camera. So the Zero W is mostly because it can use a camera. 
@@ -21,5 +23,6 @@ It also helps to create a static DHCP reservation for the SFTP server.
 
 Do not run the tweet.py script directly. Instead, put it in your crontab. 
 
-Here are instructions for crontab: [Link](https://github.com/0x416c616e/twitterweatherbot/blob/master/crontab.md)
+Here are instructions for crontab: [Link](https://github.com/0x416c616e/weatherbot_new/blob/master/crontab.md)
 
+For more info on how it works, check this out: [Link](https://github.com/0x416c616e/weatherbot_new/blob/master/how_it_works.md)
